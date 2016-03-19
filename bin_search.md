@@ -33,7 +33,7 @@ list.index()无法应对大规模数据的查询，需要用其它方法解决�
 	def binarySearch(lst, value,low,high):          #low,high是lst的查找范围
 	    if high < low:
 	        return -1
-	    mid = (low + high)/2
+	    mid = int((low + high)/2)
 	    if lst[mid] > value:
 	        return binarySearch(lst, value, low, mid-1)
 	    elif lst[mid] < value:
@@ -46,7 +46,7 @@ list.index()无法应对大规模数据的查询，需要用其它方法解决�
 	def bsearch(l, value):
 	    lo, hi = 0, len(l)-1
 	    while lo <= hi:
-	        mid = (lo + hi) / 2
+	        mid = int((lo + hi) / 2)
 	        if l[mid] < value:
 	            lo = mid + 1
 	        elif value < l[mid]:
@@ -57,8 +57,8 @@ list.index()无法应对大规模数据的查询，需要用其它方法解决�
 	 
 	if __name__ == '__main__':
 	    l = range(50)
-	    print binarySearch(l,10,0,49)
-	    print bsearch(l,10)
+	    print(binarySearch(l,10,0,49))
+	    print(bsearch(l,10))
 
 对于python，不能忽视其强大的标准库。经查阅，发现标准库中就有一个模块，名为：bisect。其文档中有这样一句话：
 
