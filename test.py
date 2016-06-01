@@ -1,4 +1,3 @@
-```
 def get_kNN_result(name):
     # Analyze start
     new_list = []
@@ -42,4 +41,3 @@ def get_kNN_result(name):
         dict_item['id'] = item1
         result.append(dict_item)
     return result
-```
